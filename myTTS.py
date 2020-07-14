@@ -3,6 +3,13 @@ import wave
 import pyaudio
 import _thread
 import time
+from googletrans import Translator
+
+translator= Translator()
+myText=input('Enter word: ')
+t= translator.translate(myText,dest='hi')
+
+print('Translation to Hindi: ' f'{t.origin} -> {t.text}')
 
 class TextToSpeech:
     
